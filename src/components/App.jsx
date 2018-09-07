@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Welcome from './Welcome';
 import KegList from './KegList';
 import NewKegControl from './NewKegControl';
+import Error404 from './Error404';
 
 function App(){
 
@@ -14,6 +15,7 @@ function App(){
               <Route exact path='/' component={Welcome} />
               <Route path='/keglist' component={KegList} />
               <Route path='/admin' component={NewKegControl} />
+              <Route component={Error404} />
             </Switch>
         </div>
     );
