@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 function Nav() {
   let navStyle = {
-      borderBottom: '2px lightgray solid',
       position: 'absolute',
       top: '0',
       width: '100%',
@@ -25,17 +24,24 @@ function Nav() {
       padding: '5px',
       float: 'right'
   };
+  let linkEle = {
+    color: 'white',
+    fontSize: '20px',
+    fontFamily: 'sans-serif',
+    fontStyle: 'oblique',
+    color: '#b3bd90'
+  }
 
   return(
     <div style={navStyle}>
         <div style={imageDiv}>
-            <Link to='/'><img style={imageStyle} src="" /></Link>
+            <Link to='/'><img style={imageStyle} src="http://www.brewbeerblog.com/wp-content/uploads/2013/09/hops-final.png" /></Link>
         </div>
         <div style={divStyle}>
-            <Link to='/schedule'><h4>Keg List</h4></Link>
+            <Link style={linkEle} to='/schedule'><h4>Keg List</h4></Link>
         </div>
         <div style={divStyle}>
-            <Link to='/admin'><h4>Admin</h4></Link>
+            <Link style={linkEle} to='/admin'><h4>Admin</h4></Link>
         </div>
     </div>
   );
