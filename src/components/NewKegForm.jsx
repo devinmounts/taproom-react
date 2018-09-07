@@ -7,7 +7,7 @@ function NewKegForm() {
     height: '100%'
   };
 
-  function handleNewMarketFormSubmission(event) {
+  function handleNewKegFormSubmission(event) {
     event.preventDefault();
     console.log(_name.value);
     console.log(_brewer.value);
@@ -29,7 +29,7 @@ function NewKegForm() {
         <input
           type='text'
           id='name'
-          palceholder='Name'
+          placeholder='Name'
           ref={(input) => {_name = input;}}/>
         <input
           type='text'

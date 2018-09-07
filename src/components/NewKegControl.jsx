@@ -23,7 +23,7 @@ class NewKegControl extends React.Component {
         currentVisibleContent = <NewKegForm />
       }
       else {
-        currentVisibleContent = <AuthConfirmation />
+        currentVisibleContent = <AuthConfirmation onAuthConfirmation={this.handleAuthConfirmation}/>
       }
     return(
       <div>
