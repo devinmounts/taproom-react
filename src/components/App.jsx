@@ -6,7 +6,7 @@ import KegList from './KegList';
 import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
 
-class App extends React.Component(){
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -62,7 +62,7 @@ class App extends React.Component(){
         }
       ]
     };
-    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
 
   handleAddingNewKegToList(newKeg){

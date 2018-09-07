@@ -30,9 +30,7 @@ class NewKegControl extends React.Component {
       <div>
         {currentVisibleContent}
       </div>
-
     );
-
   }
 }
 
