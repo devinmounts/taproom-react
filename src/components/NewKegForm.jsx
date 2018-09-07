@@ -1,8 +1,30 @@
 import React from 'react';
 
 function NewKegForm() {
+  let formDiv = {
+    paddingTop: '125px',
+    textAlign: 'center',
+    height: '100%'
+  };
+
+  function handleNewMarketFormSubmission(event) {
+    event.preventDefault();
+    console.log(_name.value);
+    console.log(_brewer.value);
+    console.log(_description.value);
+    console.log(_price.value);
+    console.log(_abv.value);
+    console.log(_remaining.value);
+    _name.value = '';
+    _brewer.value = '';
+    _description.value = '';
+    _price.value = '';
+    _abv.value = '';
+    _remaining.value = '';
+
+  }
   return(
-    <div>
+    <div style={formDiv}>
       <form onSubmit={handleNewKegFormSubmission}>
         <input
           type='text'
@@ -39,3 +61,5 @@ function NewKegForm() {
     </div>
   );
 }
+
+export default NewKegForm;

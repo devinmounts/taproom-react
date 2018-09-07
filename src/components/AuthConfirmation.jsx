@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ConfirmationQuestions(props){
+function AuthConfirmation(props){
   let confirmationDiv = {
     paddingTop: '105px',
     textAlign: 'center',
@@ -15,8 +15,8 @@ function ConfirmationQuestions(props){
   );
 }
 
-ConfirmationQuestions.propTypes = {
+AuthConfirmation.propTypes = {
   onAuthConfirmation: PropTypes.func
 };
 
-export default ConfirmationQuestions;
+export default AuthConfirmation;
