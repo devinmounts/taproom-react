@@ -38,7 +38,7 @@ function Nav() {
             <Link to='/'><img style={imageStyle} src="http://www.brewbeerblog.com/wp-content/uploads/2013/09/hops-final.png" /></Link>
         </div>
         <div style={divStyle}>
-            <Link style={linkEle} to='/schedule'><h4>Keg List</h4></Link>
+            <Link style={linkEle} to='/keglist'><h4>Keg List</h4></Link>
         </div>
         <div style={divStyle}>
             <Link style={linkEle} to='/admin'><h4>Admin</h4></Link>
