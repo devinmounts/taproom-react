@@ -52,6 +52,11 @@
 
 * Repo: https://github.com/devinmounts/taproom-react
 
+## Notes
+
+* Displaying dynamic data.
+* Best practice for locating logic.
+
 ## License
 
 This software is licensed under the MIT license.
