@@ -1,6 +1,13 @@
 import React from 'react';
 
 function NewKegForm() {
+  let _name = null;
+  let _brewer = null;
+  let _description = null;
+  let _price = null;
+  let _abv = null;
+  let _remaining = null;
+
   let formDiv = {
     paddingTop: '125px',
     textAlign: 'center',
@@ -53,9 +60,10 @@ function NewKegForm() {
           ref={(input) => {_abv = input;}}/>
         <input
           type='text'
-          id='remianing'
+          id='remaining'
           placeholder='Remaining Pints'
           ref={(input) => {_remaining = input;}}/>
+        <br/>
         <button type='submit'>Tap New Keg</button>
       </form>
     </div>
