@@ -16,12 +16,6 @@ function NewKegForm() {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    console.log(_name.value);
-    console.log(_brewer.value);
-    console.log(_description.value);
-    console.log(_price.value);
-    console.log(_abv.value);
-    console.log(_remaining.value);
     _name.value = '';
     _brewer.value = '';
     _description.value = '';
