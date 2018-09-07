@@ -6,15 +6,17 @@
 
 ## A web application that allows patrons to view the taproom selection, and allows authorized users to add, edit and delete entries.
 
+## Component Structure
+![Component Structure](./src/assets/images/TapRoom-components.jpg)
 
 ## Specs
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| Program displays a list of available kegs with information on name, brand, price and alcohol content | none| Keg List |
+| Program displays a list of available kegs with information on name, brand, price and alcohol content | N/A| Keg List |
 | Program allows employees to complete a form and add a keg to list of kegs | GingerBeer, Devin's Brews, $5, .05 ABV | GingerBeer & info is added to Keg List |
 | Program allows employees to edit keg information | GingerBeer, Devin's Brews, $7, .05 ABV | GingerBeer & info is updated on Keg List |
-| Program allows patrons and employeds to view remaing pints in keg | N/A | Ginger Beer: 120 pints remaining |
+| Program allows patrons and employees to view remaining pints in keg | N/A | Ginger Beer: 120 pints remaining |
 | Program allows employees to sell a pint, decreasing # of pints remaining | "Sell Pint" | Ginger Beer: 119 pints remaining |
 |Program allows employees to see kegs with less than 10 pints remaining| N/A  | Ginger Beer: 9 pints remaining |
 
