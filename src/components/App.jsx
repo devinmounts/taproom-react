@@ -7,7 +7,6 @@ import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
 
 function App(){
-
     return (
         <div>
             <Nav/>
