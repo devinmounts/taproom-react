@@ -20,18 +20,22 @@ function KegInfo(keg) {
   return(
       <div style={divStyle}>
           <h3>{keg.name}</h3>
-          <h5>{keg.brand}</h5>
-          <h5>{keg.price}</h5>
-          <h5>{keg.abv}</h5>
+          <h5>Brewer: {keg.brewer}</h5>
+          <h5>{keg.description}</h5>
+          <h5>${keg.price}</h5>
+          <h5>{keg.abv} ABV</h5>
+          <h5>Pints Remaining: {keg.remaining}</h5>
       </div>
   );
 }
 
 KegInfo.propTypes = {
     name: PropTypes.string,
-    brand: PropTypes.string,
+    brewer: PropTypes.string,
+    description: PropTypes.string,
     price: PropTypes.string,
-    abv: PropTypes.string
+    abv: PropTypes.string,
+    remaining: PropTypes.string
 };
 
 export default KegInfo;
