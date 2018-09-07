@@ -8,9 +8,9 @@ import Error404 from './Error404';
 
 class App extends React.Component(){
 
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {
+    this.state =  {
       masterKegList: [
         {
           name: 'Ruby Zozzle',
@@ -77,7 +77,7 @@ class App extends React.Component(){
           <Nav/>
           <Switch>
             <Route exact path='/' component={Welcome} />
-            <Route path='/keglist' component={KegList} />
+            <Route path='/keglist' render={()=><KegList kegList={this.state.masterKegList} />} />
             <Route path='/admin' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
             <Route component={Error404} />
           </Switch>

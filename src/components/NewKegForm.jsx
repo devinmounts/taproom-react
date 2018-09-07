@@ -17,18 +17,12 @@ function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    console.log(_name.value);
-    console.log(_brewer.value);
-    console.log(_description.value);
-    console.log(_price.value);
-    console.log(_abv.value);
-    console.log(_remaining.value);
     props.onNewTickeCreation({
       name: _names.value,
-      brewer: _brewer.value
-      description: _description.value
-      price: _price.value
-      abv: _abv.value
+      brewer: _brewer.value,
+      description: _description.value,
+      price: _price.value,
+      abv: _abv.value,
       remaining: _remaining.value})
     _name.value = '';
     _brewer.value = '';
