@@ -9,7 +9,7 @@ class NewKegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
     };
-    this.handleAuthConfirmation = this.handleAuthConfirmation.bind(this);
+    // this.handleAuthConfirmation = this.handleAuthConfirmation.bind(this);
   }
 
   render(){
@@ -18,8 +18,12 @@ class NewKegControl extends React.Component {
         currentVisibleContent = <NewKegForm />
       }
       else {
-        currentVisibleContent 
+        currentVisibleContent = <AuthConfirmation />
       }
     }
+    return();
+    {currentVisibleContent}
   }
 }
+
+export default NewKegControl;
