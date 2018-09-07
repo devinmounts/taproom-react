@@ -1,4 +1,5 @@
 import React from 'react';
+import barrel from '../assets/images/barrel.jpg';
 
 function Welcome(){
   let welcomeStyle = {
@@ -14,7 +15,7 @@ function Welcome(){
   };
   let welcomeDivStyle = {
       height: '100%',
-      backgroundImage: 'url(\'https://images.pexels.com/photos/1267358/pexels-photo-1267358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940\')',
+      backgroundImage: 'url(' + barrel + ')',
       backgroundSize: 'cover',
       backgroundAttachment: 'fixed'
   };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import hops from '../assets/images/hops.png';
 
 function Nav() {
   let navStyle = {
@@ -35,7 +36,7 @@ function Nav() {
   return(
     <div style={navStyle}>
         <div style={imageDiv}>
-            <Link to='/'><img style={imageStyle} src="http://www.brewbeerblog.com/wp-content/uploads/2013/09/hops-final.png" /></Link>
+            <Link to='/'><img style={imageStyle} src={hops} /></Link>
         </div>
         <div style={divStyle}>
             <Link style={linkEle} to='/keglist'><h4>Keg List</h4></Link>
