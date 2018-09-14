@@ -94,7 +94,9 @@ class App extends React.Component {
     handleSellPint(kegId){
       let newMasterKegList = this.state.masterKegList;
       let kegToSell = newMasterKegList[kegId];
-      kegToSell.remaining --;
+      if(kegToSell.remaining > 0){
+        kegToSell.remaining --;
+      }
       this.setState({masterKegList: newMasterKegList})
     }
 
@@ -102,7 +104,9 @@ class App extends React.Component {
       console.log(kegId)
       let newMasterKegList = this.state.masterKegList;
       let kegToSell = newMasterKegList[kegId];
-      kegToSell.remaining -=6;
+      if (kegToSell.remaining >= 6){
+        kegToSell.remaining -=6;
+      }
       this.setState({masterKegList: newMasterKegList})
     }
 
