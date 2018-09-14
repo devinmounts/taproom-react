@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import hops from '../assets/images/hops.png';
 
-function Nav() {
+function Nav(props) {
   let navStyle = {
       position: 'absolute',
       top: '0',
@@ -32,6 +32,7 @@ function Nav() {
     fontStyle: 'oblique',
     color: '#b3bd90'
   }
+
 
   return(
     <div style={navStyle}>

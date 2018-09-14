@@ -1,5 +1,6 @@
 import React from 'react';
 import barrel from '../assets/images/barrel.jpg';
+import Nav from './Nav';
 
 function Welcome(){
   let welcomeStyle = {
@@ -20,8 +21,11 @@ function Welcome(){
       backgroundAttachment: 'fixed'
   };
   return(
-    <div style={welcomeDivStyle}>
-        <h1 style={welcomeStyle}>Hop House</h1>
+    <div>
+      <Nav />
+      <div style={welcomeDivStyle}>
+          <h1 style={welcomeStyle}>Hop House</h1>
+      </div>
     </div>
   );
 }

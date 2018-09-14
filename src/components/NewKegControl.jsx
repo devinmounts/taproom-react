@@ -2,6 +2,7 @@ import React from 'react';
 import NewKegForm from './NewKegForm';
 import AuthConfirmation from './AuthConfirmation';
 import PropTypes from 'prop-types';
+import Nav from './Nav';
 
 class NewKegControl extends React.Component {
 
@@ -28,6 +29,7 @@ class NewKegControl extends React.Component {
       }
     return(
       <div>
+        <Nav />
         {currentVisibleContent}
       </div>
     );

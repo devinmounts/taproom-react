@@ -15,7 +15,7 @@ class App extends React.Component {
     super(props);
     this.state =  {
       masterKegList: {
-  '01': {
+      1:{
           name: 'Ruby Zozzle',
           brewer: 'Hi-Wheel',
           description: 'Sparkling Wine & Grapefruit',
@@ -23,7 +23,7 @@ class App extends React.Component {
           price: '7',
           remaining: '20'
         },
-  '02': {
+      2:{
           name: 'Tart N Juicy',
           brewer: 'Epic',
           description: 'Sour IPA',
@@ -31,7 +31,7 @@ class App extends React.Component {
           price: '6',
           remaining: '60'
         },
-  '03': {
+      3:{
           name: 'Hamm\'s',
           brewer: 'Miller/Coors',
           description: 'American Lager',
@@ -39,7 +39,7 @@ class App extends React.Component {
           price: '3',
           remaining: '65'
         },
-  '04': {
+      4:{
           name: 'Prismatic',
           brewer: 'Ninkasi',
           description: 'Juicy IPA',
@@ -47,7 +47,7 @@ class App extends React.Component {
           price: '6',
           remaining: '75'
         },
-  '05': {
+      5:{
           name: 'Juicy Haze',
           brewer: 'New Belgium',
           description: 'India Pale Ale',
@@ -55,7 +55,7 @@ class App extends React.Component {
           price: '6',
           remaining: '18'
         },
-  '06': {
+      6:{
           name: '8 Hop',
           brewer: 'New Belgium',
           description: 'Pale Ale',
@@ -85,10 +85,10 @@ class App extends React.Component {
   render(){
     return (
         <div>
-          <Nav/>
           <Switch>
             <Route exact path='/' component={Welcome} />
             <Route path='/keglist' render={()=><KegList kegList={this.state.masterKegList} />} />
+            <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
             <Route path='/admin'
               render={(props)=><Admin
                 onNewKegCreation={this.handleAddingNewKegToList}
