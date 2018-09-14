@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import hops from '../assets/images/hops.png';
 
-function Nav() {
+function Nav(props) {
   let navStyle = {
     position: 'absolute',
     top: '0',
@@ -40,9 +40,6 @@ function Nav() {
       </div>
       <div style={divStyle}>
         <Link style={linkEle} to='/admin'><h4>Admin</h4></Link>
-      </div>
-      <div style={divStyle}>
-        <Link style={linkEle} to='/keglist'><h4>Keg List</h4></Link>
       </div>
     </div>
   );
