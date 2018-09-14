@@ -25,8 +25,8 @@ function KegList(props){
           price = {keg.price}
           abv = {keg.abv}
           remaining = {keg.remaining}
-          key = {keg.id}
-          kegId = {keg.id}
+          key = {kegId}
+          kegId = {kegId}
           currentRouterPath={props.currentRouterPath}
           onChangeSelectedKeg={props.onChangeSelectedKeg} />;
       })}
