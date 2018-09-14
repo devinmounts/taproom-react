@@ -4,10 +4,19 @@ import KegList from './KegList';
 import KegDetail from './KegDetail';
 
 
-function Admin(){
+function Admin(props){
+
   return(
     <div>Admin Works</div>
   );
 }
 
+Admin.propTypes = {
+  kegList = PropTypes.string,
+  onNewKegCreation = PropTypes.func,
+  onChangeSelectedKeg = PropTypes.func,
+  currentRouterPath = PropTypes.string,
+  selectedKeg = PropTypes.object,
+
+}
 export default Admin;
