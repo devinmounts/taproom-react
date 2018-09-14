@@ -5,9 +5,10 @@
 #### By Devin Mounts
 
 ## A web application that allows patrons to view the taproom selection, and allows authorized users to add, edit and delete entries.  This React project is a recreation of a similar Angular application.
-
+## Splash
+![Welcome Page](./src/assets/images/cover.png)
 ## Component Structure
-![Component Structure](./src/assets/images/TapRoom-components.jpg)
+![Component Structure](./src/assets/images/taproomtree.jpg)
 
 ## Specs
 
