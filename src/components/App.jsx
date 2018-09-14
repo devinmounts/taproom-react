@@ -92,14 +92,18 @@ class App extends React.Component {
     }
 
     handleSellPint(kegId){
-      let kegToSell = this.state.masterKegList[kegId];
+      let newMasterKegList = this.state.masterKegList;
+      let kegToSell = newMasterKegList[kegId];
       kegToSell.remaining --;
-      console.log(kegToSell.remaining)
+      this.setState({masterKegList: newMasterKegList})
     }
 
     handleSellGrowler(kegId){
-      let kegToSell = this.state.masterKegList[kegId];
-      kegToSell.remaining -6;
+      console.log(kegId)
+      let newMasterKegList = this.state.masterKegList;
+      let kegToSell = newMasterKegList[kegId];
+      kegToSell.remaining -=6;
+      this.setState({masterKegList: newMasterKegList})
     }
 
     render(){
