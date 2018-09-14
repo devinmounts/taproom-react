@@ -16,6 +16,14 @@ function KegDetail(props){
       boxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
       backgroundColor: '#76b35d'
   };
+
+  function handleSellPint(){
+
+  }
+
+  function handleSellGrowler(){
+    
+  }
   return(
     <div style={divStyle}>
       <h2>Keg Details</h2>
@@ -23,6 +31,8 @@ function KegDetail(props){
       <h2>{props.selectedKeg.details}</h2>
       <h4><em>{props.selectedKeg.remaining}</em></h4>
       <hr/>
+      <button onClick={handleSellPint}>Sell Pint</button>
+      <button onClick={handleSellGrowler}>Sell Growler</button>
 
     </div>
   );

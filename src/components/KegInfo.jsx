@@ -17,8 +17,8 @@ function KegInfo(props) {
       backgroundColor: '#76b35d'
   };
 
-  function handleChangeSelectedKeg(keg){
-    props.onChangeSelectedKeg(keg);
+  function handleChangeSelectedKeg(kegId){
+    props.onChangeSelectedKeg(kegId);
   }
 
   const kegInformation =
@@ -35,12 +35,7 @@ function KegInfo(props) {
     return (
       <div style={divStyle}
         onClick={() => {handleChangeSelectedKeg(
-          {name: props.name,
-          brewer: props.brewer,
-          description: props.description,
-          price: props.price,
-          abv: props.abv,
-          remaining: props.remaining });}}
+          {kegId: props.kegId});}}
         >
         {kegInformation}
       </div>
@@ -60,6 +55,7 @@ KegInfo.propTypes = {
     description: PropTypes.string,
     price: PropTypes.string,
     abv: PropTypes.string,
+    kegId: PropTypes.string.isRequired,
     remaining: PropTypes.string,
     onChangeSelectedKeg: PropTypes.func,
     currentRouterPath: PropTypes.string

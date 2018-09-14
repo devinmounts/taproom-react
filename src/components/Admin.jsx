@@ -7,7 +7,8 @@ import KegDetail from './KegDetail';
 function Admin(props){
   let optionalSelectedKegContent = null;
   if(props.selectedKeg !== null){
-    optionalSelectedKegContent = <KegDetail selectedKeg ={props.selectedKeg} />
+    optionalSelectedKegContent = <KegDetail
+      selectedKeg ={props.kegList[props.selectedKeg]}/>;
   }
 
   let containerStyle = {
@@ -34,6 +35,6 @@ Admin.propTypes = {
   onNewKegCreation: PropTypes.func,
   onChangeSelectedKeg: PropTypes.func,
   currentRouterPath: PropTypes.string.isRequired,
-  selectedKeg: PropTypes.object
+  selectedKeg: PropTypes.string
 }
 export default Admin;
