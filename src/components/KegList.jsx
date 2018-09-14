@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 function KegList(props){
   let kegListDiv = {
-    paddingTop: '105px',
     textAlign: 'center',
     height: '100%'
   };
@@ -33,7 +32,7 @@ function KegList(props){
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.array,
   currentRouterPath: PropTypes.string,
   onChangeSelectedKeg: PropTypes.func
 };

@@ -18,43 +18,41 @@ function KegInfo(props) {
   };
 
   function handleChangeSelectedKeg(keg){
+    console.log('clicked ' + keg.name)
     props.onChangeSelectedKeg(keg);
   }
 
   const kegInformation =
     <div>
-        <h3>{props.name}</h3>
-        <h5>Brewer: {props.brewer}</h5>
-        <h5>{props.description}</h5>
-        <h5>${props.price}</h5>
-        <h5>{props.abv} ABV</h5>
-        <h5>Pints Remaining: {props.remaining}</h5>
+      <h3>{props.name}</h3>
+      <h5>Brewer: {props.brewer}</h5>
+      <h5>{props.description}</h5>
+      <h5>${props.price}</h5>
+      <h5>{props.abv} ABV</h5>
+      <h5>Pints Remaining: {props.remaining}</h5>
     </div>;
 
-    if (props.currentRouterPath === '/admin'){
-      return (
-        <div style={divStyle}
-          onClick={handleChangeSelectedKeg(
-            {name: props.name,
-            brewer: props.brewer,
-            description: props.description,
-            price: props.price,
-            abv: props.abv,
-            remaining: props.remaining })}>
-          {kegInformation}
-        </div>
-      );
-    } else {
-      return(
-        <div style={divStyle}>
-          {listingInformation}
-        </div>
-      )
-    }
-
-  return(
-
-  );
+  if (props.currentRouterPath === '/admin'){
+    return (
+      <div style={divStyle}
+        onClick={() => {handleChangeSelectedKeg(
+          {name: props.name,
+          brewer: props.brewer,
+          description: props.description,
+          price: props.price,
+          abv: props.abv,
+          remaining: props.remaining });}}
+        >
+        {kegInformation}
+      </div>
+    );
+  } else {
+    return(
+      <div style={divStyle}>
+        {kegInformation}
+      </div>
+    );
+  }
 }
 
 KegInfo.propTypes = {

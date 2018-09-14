@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import KegList from './KegList';
 import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
+import Admin from './Admin';
 import { Redirect } from 'react-router-dom';
 
 class App extends React.Component {

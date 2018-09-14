@@ -12,7 +12,7 @@ function Admin(props){
 
   let containerStyle = {
     maxWidth: '1200px',
-    margin: '2rem auto'
+    margin: '5rem auto'
   }
 
   return(
@@ -23,17 +23,16 @@ function Admin(props){
         kegList={props.kegList}
         onNewKegCreation={props.onNewKegCreation}
         onChangeSelectedKeg={props.onChangeSelectedKeg}
-        selectedKeg={props.selectedKeg}
+        selectedKeg={props.selectedKeg} />
     </div>
   );
 }
 
 Admin.propTypes = {
-  kegList = PropTypes.array,
-  onNewKegCreation = PropTypes.func,
-  onChangeSelectedKeg = PropTypes.func,
-  currentRouterPath = PropTypes.string.isRequired
-  selectedKeg = PropTypes.object,
-
+  kegList: PropTypes.array,
+  onNewKegCreation: PropTypes.func,
+  onChangeSelectedKeg: PropTypes.func,
+  currentRouterPath: PropTypes.string.isRequired,
+  selectedKeg: PropTypes.object
 }
 export default Admin;
