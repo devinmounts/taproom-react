@@ -6,16 +6,10 @@ import { Link } from 'react-router-dom';
 
 
 function Admin(props){
-    console.log(props);
-    console.log(props.kegList);
-    console.log(props.selectedKeg);
-    console.log(props.kegList[props.selectedKeg]);
-
-
     let optionalSelectedKegContent = null;
     if(props.selectedKeg !== null){
         optionalSelectedKegContent = <KegDetail
-          selectedKeg ={props.kegList[props.selectedKeg]}
+          selectedKeg ={props.kegList[props.selectedKeg.kegId]}
           onSellPint={props.onSellPint}
           onSellGrowler={props.onSellGrowler}
           />;

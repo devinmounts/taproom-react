@@ -19,11 +19,11 @@ function KegDetail(props){
 
     function handleSellPint(){
         console.log(props)
-        props.onSellPint(props.selectedKeg.kegId);
+        props.onSellPint(props.selectedKeg.id);
     }
 
     function handleSellGrowler(){
-        props.onSellGrowler(props.selectedKeg.kegId);
+        props.onSellGrowler(props.selectedKeg.id);
     }
     return(
         <div style={divStyle}>

@@ -15,56 +15,62 @@ class App extends React.Component {
         super(props);
         this.state =  {
             masterKegList: {
-                // 1:{
-                //     name: 'Ruby Zozzle',
-                //     brewer: 'Hi-Wheel',
-                //     description: 'Sparkling Wine & Grapefruit',
-                //     abv: '6.8%',
-                //     price: '7',
-                //     remaining: 20
-                // },
-                // 2:{
-                //     name: 'Tart N Juicy',
-                //     brewer: 'Epic',
-                //     description: 'Sour IPA',
-                //     abv: '4.5%',
-                //     price: '6',
-                //     remaining: 60
-                // },
-                // 3:{
-                //     name: 'Hamm\'s',
-                //     brewer: 'Miller/Coors',
-                //     description: 'American Lager',
-                //     abv: '4.7%',
-                //     price: '3',
-                //     remaining: 65
-                // },
-                // 4:{
-                //     name: 'Prismatic',
-                //     brewer: 'Ninkasi',
-                //     description: 'Juicy IPA',
-                //     abv:  '5.9%',
-                //     price: '6',
-                //     remaining: 75
-                // },
-                // 5:{
-                //     name: 'Juicy Haze',
-                //     brewer: 'New Belgium',
-                //     description: 'India Pale Ale',
-                //     abv:  '7.5%',
-                //     price: '6',
-                //     remaining: 18
-                // },
-                // 6:{
-                //     name: '8 Hop',
-                //     brewer: 'New Belgium',
-                //     description: 'Pale Ale',
-                //     abv:  '5.5%',
-                //     price: '6',
-                //     remaining: 58
-                // }
+            '1':{
+                  name: 'Ruby Zozzle',
+                  brewer: 'Hi-Wheel',
+                  description: 'Sparkling Wine & Grapefruit',
+                  id: '1',
+                  abv: '6.8%',
+                  price: '7',
+                  remaining: 20
+                },
+            '2':{
+                  name: 'Tart N Juicy',
+                  brewer: 'Epic',
+                  description: 'Sour IPA',
+                  id: '2',
+                  abv: '4.5%',
+                  price: '6',
+                  remaining: 60
+                },
+            '3':{
+                  name: 'Hamm\'s',
+                  brewer: 'Miller/Coors',
+                  description: 'American Lager',
+                  abv: '4.7%',
+                  id: '3',
+                  price: '3',
+                  remaining: 65
+                },
+            '4':{
+                  name: 'Prismatic',
+                  brewer: 'Ninkasi',
+                  description: 'Juicy IPA',
+                  id: '4',
+                  abv:  '5.9%',
+                  price: '6',
+                  remaining: 75
+                },
+            '5':{
+                  name: 'Juicy Haze',
+                  brewer: 'New Belgium',
+                  description: 'India Pale Ale',
+                  id: '5',
+                  abv:  '7.5%',
+                  price: '6',
+                  remaining: 18
+                },
+            '6':{
+                  name: '8 Hop',
+                  brewer: 'New Belgium',
+                  description: 'Pale Ale',
+                  id: '6',
+                  abv:  '5.5%',
+                  price: '6',
+                  remaining: 58
+                }
             },
-            selectedKeg: null
+            kegId: null
         };
         this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
         this.handleChangeSelectedKeg = this.handleChangeSelectedKeg.bind(this);
@@ -73,23 +79,27 @@ class App extends React.Component {
     }
 
     handleAddingNewKegToList(newKeg){
-        let newKegId = v4();
-        let newMasterKegList = Object.assign(
-            {}, this.state.masterKegList,
-            {[newKegId]: newKeg});
-        this.setState({masterKegList: newMasterKegList});
+      let newKegId = v4();
+      newKeg.id = newKegId;
+      let newMasterKegList = Object.assign(
+          {}, this.state.masterKegList,
+          {[newKegId]: newKeg});
+      this.setState({masterKegList: newMasterKegList});
     }
 
     handleChangeSelectedKeg(kegId){
-        this.setState({selectedKeg: kegId});
+        this.setState({kegId: kegId});
     }
 
     handleSellPint(kegId){
-      console.log('sell pint ' + kegId)
+      let kegToSell = this.state.masterKegList[kegId];
+      kegToSell.remaining --;
+      console.log(kegToSell.remaining)
     }
 
     handleSellGrowler(kegId){
-      console.log('sell growler ' + kegId)
+      let kegToSell = this.state.masterKegList[kegId];
+      kegToSell.remaining -6;
     }
 
     render(){
@@ -105,7 +115,7 @@ class App extends React.Component {
                         kegList={this.state.masterKegList}
                         currentRouterPath={props.location.pathname}
                         onChangeSelectedKeg={this.handleChangeSelectedKeg}
-                        selectedKeg={this.state.selectedKeg}
+                        selectedKeg={this.state.kegId}
                         onSellPint={this.handleSellPint}
                         onSellGrowler={this.handleSellGrowler}
                       />}
