@@ -17,6 +17,7 @@ function Admin(props){
       selectedKeg ={props.kegList[props.selectedKeg.kegId]}
       onSellPint={props.onSellPint}
       onSellGrowler={props.onSellGrowler}
+      onCloseModal={props.onCloseModal}
     />;
   }
 
@@ -42,6 +43,7 @@ Admin.propTypes = {
   currentRouterPath: PropTypes.string.isRequired,
   selectedKeg: PropTypes.object,
   onSellPint: PropTypes.func,
-  onSellGrowler: PropTypes.func
+  onSellGrowler: PropTypes.func,
+  onCloseModal: PropTypes.func
 };
 export default Admin;

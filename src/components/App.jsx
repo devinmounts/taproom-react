@@ -75,6 +75,7 @@ class App extends React.Component {
     this.handleChangeSelectedKeg = this.handleChangeSelectedKeg.bind(this);
     this.handleSellPint = this.handleSellPint.bind(this);
     this.handleSellGrowler = this.handleSellGrowler.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   handleAddingNewKegToList(newKeg){
@@ -108,6 +109,10 @@ class App extends React.Component {
     this.setState({masterKegList: newMasterKegList});
   }
 
+  handleCloseModal(){
+    this.setState({kegId: null})
+  }
+
   render(){
     return (
       <div>
@@ -124,6 +129,7 @@ class App extends React.Component {
               selectedKeg={this.state.kegId}
               onSellPint={this.handleSellPint}
               onSellGrowler={this.handleSellGrowler}
+              onCloseModal={this.handleCloseModal}
             />}
           />
           <Route component={Error404} />
