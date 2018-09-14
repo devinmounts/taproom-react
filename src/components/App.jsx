@@ -10,8 +10,12 @@ import { Redirect } from 'react-router-dom';
 import { v4 } from 'uuid';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function App(){
 =======
+=======
+
+>>>>>>> b1da919d22165045f416758f47cf6c68c97f67c8
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -117,7 +121,6 @@ class App extends React.Component {
   }
 
   render(){
->>>>>>> refactor-state
     return (
       <div>
         <Switch>

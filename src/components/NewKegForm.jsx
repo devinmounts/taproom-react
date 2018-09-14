@@ -16,8 +16,6 @@ function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-<<<<<<< HEAD
-=======
     props.onNewKegCreation({
       name: _name.value,
       brewer: _brewer.value,
@@ -26,7 +24,6 @@ function NewKegForm(props) {
       abv: _abv.value,
       id: '',
       remaining: 120});
->>>>>>> refactor-state
     _name.value = '';
     _brewer.value = '';
     _description.value = '';

@@ -5,6 +5,7 @@
 #### By Devin Mounts
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## A web application that allows patrons to view the taproom selection, and allows authorized users to add, edit and delete entries.  This React project is a recreation of a similar Angular application.  Thus far the applications are similar, varying only in relationship to passing data from the parent to child.  Where as Angular follows the rule of "Data-Down, Actions-Up".  React passes data in a unidirectional flow, which requires state to be lifted to the highest common component.  For this application, data flow is similar to the Angular application, as the highest common component is the App Root."
 
 =======
@@ -12,6 +13,13 @@
 ## Splash
 ![Welcome Page](./src/assets/images/cover.png)
 >>>>>>> refactor-state
+=======
+
+## A web application that allows patrons to view the taproom selection, and allows authorized users to add, edit and delete entries.  This React project is a recreation of a similar Angular application.
+## Splash
+![Welcome Page](./src/assets/images/cover.png)
+
+>>>>>>> b1da919d22165045f416758f47cf6c68c97f67c8
 ## Component Structure
 ![Component Structure](./src/assets/images/taproomtree.jpg)
 
