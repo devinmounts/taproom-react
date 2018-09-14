@@ -90,8 +90,10 @@ class App extends React.Component {
                 onNewKegCreation={this.handleAddingNewKegToList}
                 kegList={this.state.masterKegList}
                 currentRouterPath={props.location.pathname}
-                onChangeSelectedKeg={this.handleChangeSelectedKeg
-                selectedKeg={this.state.selectedKeg}}/>} />
+                onChangeSelectedKeg={this.handleChangeSelectedKeg}
+                selectedKeg={this.state.selectedKeg}
+              />}
+            />
             <Route component={Error404} />
           </Switch>
         </div>
