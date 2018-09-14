@@ -13,7 +13,8 @@ function KegDetail(props){
     MozBoxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
     boxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
     backgroundColor: '#76b35d',
-    position: 'fixed'
+    position: 'fixed',
+    textAlign: 'left'
   };
 
   let divAlertStyle = {
@@ -28,6 +29,7 @@ function KegDetail(props){
     boxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
     backgroundColor: '#e39b3d',
     position: 'fixed',
+    textAlign: 'left'
   };
 
   let divWarningStyle = {
@@ -41,7 +43,8 @@ function KegDetail(props){
     MozBoxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
     boxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
     backgroundColor: '#e33d3d',
-    position: 'fixed'
+    position: 'fixed',
+    textAlign: 'left'
   };
 
   let modalStyle = {
@@ -76,15 +79,30 @@ function KegDetail(props){
     return(
       <div style={modalStyle}>
         <div style={divWarningStyle}>
-          <button style={button} onClick={handleCloseModal} >Close</button>
+          <button className='buttonStyle' style={button} onClick={handleCloseModal} >Close</button>
           <h2>Keg Details</h2>
           <h1>{props.selectedKeg.name} - {props.selectedKeg.brewer}</h1>
           <h2>{props.selectedKeg.details}</h2>
           <h4><em>{props.selectedKeg.remaining}</em></h4>
           <hr/>
-          <button onClick={handleSellPint}>Sell Pint</button>
-          <button onClick={handleSellGrowler}>Sell Growler</button>
+          <button className='buttonStyle' onClick={handleSellPint}>Sell Pint</button>
+          <button className='buttonStyle' onClick={handleSellGrowler}>Sell Growler</button>
         </div>
+        <style jsx>{`
+          .buttonStyle {
+              background: #601ac7;
+              padding: 10px 17px;
+              border-radius: 5px;
+              margin-right: 10px;
+              color: white;
+              border: 1px solid #3f1084;
+              font-weight: 700;
+          }
+          .buttonStyle:hover{
+            background: #3e0e84;
+            color:white;
+          }
+      `}</style>
       </div>
 
     );
@@ -92,30 +110,60 @@ function KegDetail(props){
     return(
       <div style={modalStyle}>
         <div style={divAlertStyle}>
-          <button style={button} onClick={handleCloseModal} >Close</button>
+          <button className='buttonStyle' style={button} onClick={handleCloseModal} >Close</button>
           <h2>Keg Details</h2>
           <h1>{props.selectedKeg.name} - {props.selectedKeg.brewer}</h1>
           <h2>{props.selectedKeg.details}</h2>
           <h4><em>{props.selectedKeg.remaining}</em></h4>
           <hr/>
-          <button onClick={handleSellPint}>Sell Pint</button>
-          <button onClick={handleSellGrowler}>Sell Growler</button>
+          <button className='buttonStyle' onClick={handleSellPint}>Sell Pint</button>
+          <button className='buttonStyle' onClick={handleSellGrowler}>Sell Growler</button>
         </div>
+        <style jsx>{`
+          .buttonStyle {
+              background: #601ac7;
+              padding: 10px 17px;
+              border-radius: 5px;
+              margin-right: 10px;
+              color: white;
+              border: 1px solid #3f1084;
+              font-weight: 700;
+          }
+          .buttonStyle:hover{
+            background: #3e0e84;
+            color:white;
+          }
+      `}</style>
       </div>
     );
   } else {
     return (
       <div style={modalStyle}>
         <div style={divStyle}>
-          <button style={button} onClick={handleCloseModal}>Close</button>
+          <button className='buttonStyle' style={button} onClick={handleCloseModal}>Close</button>
           <h2>Keg Details</h2>
           <h1>{props.selectedKeg.name} - {props.selectedKeg.brewer}</h1>
           <h2>{props.selectedKeg.details}</h2>
           <h4><em>{props.selectedKeg.remaining}</em></h4>
           <hr/>
-          <button onClick={handleSellPint}>Sell Pint</button>
-          <button onClick={handleSellGrowler}>Sell Growler</button>
+          <button className='buttonStyle' onClick={handleSellPint}>Sell Pint</button>
+          <button className='buttonStyle' onClick={handleSellGrowler}>Sell Growler</button>
         </div>
+        <style jsx>{`
+          .buttonStyle {
+              background: #601ac7;
+              padding: 10px 17px;
+              border-radius: 5px;
+              margin-right: 10px;
+              color: white;
+              border: 1px solid #3f1084;
+              font-weight: 700;
+          }
+          .buttonStyle:hover{
+            background: #3e0e84;
+            color:white;
+          }
+      `}</style>
       </div>
     );
   }
