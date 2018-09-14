@@ -18,7 +18,6 @@ function KegInfo(props) {
   };
 
   function handleChangeSelectedKeg(keg){
-    console.log('clicked ' + keg.name)
     props.onChangeSelectedKeg(keg);
   }
 

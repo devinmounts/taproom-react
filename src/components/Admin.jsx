@@ -18,6 +18,7 @@ function Admin(props){
   return(
     <div style={containerStyle}>
       <h2>Admin</h2>
+      {optionalSelectedKegContent}
       <KegList
         currentRouterPath={props.currentRouterPath}
         kegList={props.kegList}
