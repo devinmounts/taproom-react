@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import KegList from './KegList';
 import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
+import { Redirect } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -60,15 +61,23 @@ class App extends React.Component {
           price: '6',
           remaining: '58'
         }
-      ]
+      ],
+      redirect: false
     };
      this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+  }
+
+  renderRedirect(){
+    if(this.state.redirect) {
+      return <Redirect to='/keglist' />
+    }
   }
 
   handleAddingNewKegToList(newKeg){
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
+    this.setState({redirect: true});
   }
 
   render(){
@@ -80,6 +89,7 @@ class App extends React.Component {
             <Route path='/keglist' render={()=><KegList kegList={this.state.masterKegList} />} />
             <Route path='/admin' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
             <Route component={Error404} />
+            {this.renderRedirect()}
           </Switch>
         </div>
     );
