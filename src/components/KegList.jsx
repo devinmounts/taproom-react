@@ -1,6 +1,5 @@
 import React from 'react';
 import KegInfo from './KegInfo';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function KegList(props){
@@ -25,7 +24,9 @@ function KegList(props){
           price = {keg.price}
           abv = {keg.abv}
           remaining = {keg.remaining}
-          key = {index} />
+          key = {index}
+          currentRouterPath={props.currentRouterPath}
+          onChangeSelectedKeg={props.onChangeSelectedKeg} />
       )}
     </div>
   );
@@ -33,6 +34,8 @@ function KegList(props){
 
 KegList.propTypes = {
   kegList: PropTypes.array
+  currentRouterPath: PropTypes.string,
+  onChangeSelectedKeg: PropTypes.func
 };
 
 export default KegList;
