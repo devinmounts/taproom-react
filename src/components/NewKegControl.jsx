@@ -5,39 +5,38 @@ import PropTypes from 'prop-types';
 import Nav from './Nav';
 
 class NewKegControl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formVisibleOnPage: false,
+    };
+    this.handleAuthConfirmation = this.handleAuthConfirmation.bind(this);
+  }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            formVisibleOnPage: false,
-        };
-        this.handleAuthConfirmation = this.handleAuthConfirmation.bind(this);
-    }
+  handleAuthConfirmation() {
+    this.setState({formVisibleOnPage: true});
+    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
+  }
 
-    handleAuthConfirmation() {
-        this.setState({formVisibleOnPage: true});
-        console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
+  render(){
+    let currentVisibleContent = null;
+    if (this.state.formVisibleOnPage){
+      currentVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation}/>;
     }
-
-    render(){
-        let currentVisibleContent = null;
-        if (this.state.formVisibleOnPage){
-            currentVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation}/>;
-        }
-        else {
-            currentVisibleContent = <AuthConfirmation onAuthConfirmation={this.handleAuthConfirmation}/>;
-        }
-        return(
-            <div>
-                <Nav />
-                {currentVisibleContent}
-            </div>
-        );
+    else {
+      currentVisibleContent = <AuthConfirmation onAuthConfirmation={this.handleAuthConfirmation}/>;
     }
+    return(
+      <div>
+        <Nav />
+        {currentVisibleContent}
+      </div>
+    );
+  }
 }
 
 NewKegControl.propTypes = {
-    onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func
 };
 
 export default NewKegControl;

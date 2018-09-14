@@ -47,12 +47,11 @@ function KegDetail(props){
 
 
   function handleSellPint(){
-      console.log(props)
-      props.onSellPint(props.selectedKeg.id);
+    props.onSellPint(props.selectedKeg.id);
   }
 
   function handleSellGrowler(){
-      props.onSellGrowler(props.selectedKeg.id);
+    props.onSellGrowler(props.selectedKeg.id);
   }
 
   if(props.selectedKeg.remaining < 11){
@@ -95,8 +94,8 @@ function KegDetail(props){
 }
 
 KegDetail.propTypes = {
-    selectedKeg: PropTypes.object,
-    onSellPint: PropTypes.func,
-    onSellGrowler: PropTypes.func
+  selectedKeg: PropTypes.object,
+  onSellPint: PropTypes.func,
+  onSellGrowler: PropTypes.func
 };
 export default KegDetail;

@@ -41,9 +41,6 @@ function Nav(props) {
       <div style={divStyle}>
         <Link style={linkEle} to='/admin'><h4>Admin</h4></Link>
       </div>
-      <div style={divStyle}>
-        <Link style={linkEle} to='/keglist'><h4>Keg List</h4></Link>
-      </div>
     </div>
   );
 }
