@@ -15,7 +15,6 @@ class NewKegControl extends React.Component {
 
   handleAuthConfirmation() {
     this.setState({formVisibleOnPage: true});
-    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render(){

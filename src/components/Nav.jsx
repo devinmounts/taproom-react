@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import hops from '../assets/images/hops.png';
 
-function Nav(props) {
+function Nav() {
   let navStyle = {
     position: 'absolute',
     top: '0',
