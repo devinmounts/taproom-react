@@ -55,11 +55,11 @@ function KegDetail(props){
     backgroundColor: '#1a1e1a85',
     backgroundSize: 'cover',
     textAlign: 'center',
-  }
+  };
 
   let button = {
     float: 'right'
-  }
+  };
 
 
 
@@ -72,7 +72,7 @@ function KegDetail(props){
   }
 
   function handleCloseModal(){
-    props.onCloseModal()
+    props.onCloseModal();
   }
 
   if(props.selectedKeg.remaining < 11){
